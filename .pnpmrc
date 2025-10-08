@@ -1,0 +1,19 @@
+# Store all packages in a single place
+# This can save disk space and make installs faster
+# auto-install-peers=true
+
+# Automatically install peer dependencies
+auto-install-peers=true
+
+# Use strict peer dependencies
+strict-peer-dependencies=false
+
+# Hoist all dependencies to the root node_modules
+# This can help with some tools that expect dependencies to be hoisted
+hoist-pattern[]=*
+
+# Save exact versions instead of ranges
+save-exact=false
+
+# Enable shamefully-hoist for better compatibility
+shamefully-hoist=false
