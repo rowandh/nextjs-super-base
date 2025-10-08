@@ -4,7 +4,7 @@ import { publicProcedure, router } from '@/lib/trpc';
 export const exampleRouter = router({
   hello: publicProcedure
     .input(z.object({ name: z.string().optional() }))
-    .query(({ input }) => {
+    .query(({ input }: { input: { name?: string } }) => {
       return {
         greeting: `Hello ${input.name ?? 'World'}!`,
       };
@@ -12,7 +12,7 @@ export const exampleRouter = router({
   
   getUser: publicProcedure
     .input(z.object({ id: z.number() }))
-    .query(({ input }) => {
+    .query(({ input }: { input: { id: number } }) => {
       return {
         id: input.id,
         name: `User ${input.id}`,
@@ -27,7 +27,7 @@ export const exampleRouter = router({
         email: z.string().email(),
       })
     )
-    .mutation(({ input }) => {
+    .mutation(({ input }: { input: { name: string; email: string } }) => {
       return {
         id: Math.floor(Math.random() * 1000),
         name: input.name,
