@@ -11,6 +11,7 @@ A modern Next.js starter template with tRPC, Superjson, Zod, and shadcn/ui.
 - **[shadcn/ui](https://ui.shadcn.com/)** - Re-usable components built with Radix UI and Tailwind CSS
 - **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[TypeScript](https://www.typescriptlang.org/)** - Type safety
+- **[pnpm](https://pnpm.io/)** - Fast, disk space efficient package manager
 
 ## Features
 
@@ -22,12 +23,36 @@ A modern Next.js starter template with tRPC, Superjson, Zod, and shadcn/ui.
 - ✅ Tailwind CSS 4 for styling
 - ✅ TypeScript for type safety
 - ✅ ESLint for code quality
+- ✅ pnpm for fast, efficient package management
+
+## Package Management with pnpm
+
+This project uses [pnpm](https://pnpm.io/) as the package manager for several benefits:
+
+- **Fast**: pnpm is 2x faster than npm and yarn
+- **Efficient**: Saves disk space by using a content-addressable store
+- **Strict**: Creates a non-flat node_modules by default, helping to avoid dependency hell
+- **Monorepo-friendly**: Built-in support for monorepos
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 18.17 or later
+- pnpm 9.0.0 or later
+
+You can install pnpm globally:
+```bash
+npm install -g pnpm
+# or
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+Verify your installation:
+```bash
+node --version
+pnpm --version
+```
 
 ### Installation
 
@@ -39,12 +64,12 @@ cd nextjs-super-base
 
 2. Install dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 3. Run the development server:
 ```bash
-npm run dev
+pnpm dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
@@ -74,10 +99,10 @@ nextjs-super-base/
 
 ## Available Scripts
 
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
+- `pnpm dev` - Start development server with Turbopack
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
 
 ## tRPC Usage
 
